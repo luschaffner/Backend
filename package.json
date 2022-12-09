@@ -1,13 +1,15 @@
 {
-  "name": "proyecto-backend--lucas-schaffner",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "express": "^4.18.2"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "api-restful-08-12-22",
+  "version": "1.0.0",
+  "main": "server.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
