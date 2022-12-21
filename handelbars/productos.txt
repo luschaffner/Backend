@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Gin tonic",
+    "price": 780,
+    "thumbnail": "https://pixabay.com/get/g11928134471bc5d6d146265e8be7dac97b4bcf1325cf1e494bb8c7f50c3197476aa933d606ea4d5193c7db2bc027b99c97ca6b26ebd8abea4459436a14ccd5b5d2d4f7a24776c608d2588026d1384dcf_1920.jpg",
+    "id": 2,
+  }
+]
