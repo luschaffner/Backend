@@ -1,0 +1,5 @@
+Elijo EJS porque me parece más sólido y fácil de utilizar a la hora de
+aplicar lógica dentro de las plantillas.
+Además, al parecerse más a html en la sintaxis me resulta más familiar que PUG (aunque debo reconocer que
+PUG tiene un código más "limpio" al no utilizar los caracteres especiales de EJS"),
+y más simple de inicializar que HANDLEBARS.

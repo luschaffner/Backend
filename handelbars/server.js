@@ -1,8 +1,18 @@
 const express = require('express')
 const app = express()
+const { engine } = require('express-handlebars')
 const apiProducts = require('./api/contenedor.js')
 
-app.set('view engine', 'ejs')
+app.engine(
+    'hbs',
+    engine({
+        extname: '.hbs',
+        defaultLayout: 'index.hbs',
+        layoutsDir: __dirname + '/views/layouts'
+    })
+)
+
+app.set('view engine', 'hbs')
 app.set('views', './views')
 
 app.use(express.json())
@@ -19,7 +29,7 @@ app.post('/productos', (req, res) => {
 
 app.get('/productos', async (req, res) => {
     const allProducts = await products.getAll()
-    res.render('index', {
+    res.render('main', {
         allProducts: allProducts,
         productsQty: allProducts.length
     })
@@ -30,4 +40,4 @@ const PORT = 8080
 const server = app.listen(PORT, () => {
     console.log(`Servidor http escuchando en puerto ${server.address().port}`)
 })
-server.on('error', error => console.log(`Error en servidor, ${error}`)) 
+server.on('error', error => console.log(`Error en servidor, ${error}`))

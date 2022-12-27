@@ -1,0 +1,29 @@
+<section>
+
+    <h2>Listado de productos</h2>
+
+    <% if (productsQty) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% allProducts.forEach(function(product) { %>
+                    <tr>
+                        <td><%= product.product %></td>
+                        <td>$ <%= product.price %></td>
+                        <td><img class='thumbnail' src=<%= product.thumbnail %> alt='imagen producto' width="60px"></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p class='prodsLink'>No se encontraron productos</p>
+    <% } %>
+    <a class='prodsLink' href="/">Cargar productos</a>
+
+</section>

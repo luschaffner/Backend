@@ -43,3 +43,33 @@
         padding: 8px;
     }
 </style>
+
+<section>
+
+    <h2>Listado de productos</h2>
+
+    {{#if productsQty}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each allProducts}}
+                    <tr>
+                        <td>{{this.product}}</td>
+                        <td>$ {{this.price}}</td>
+                        <td><img class='thumbnail' src={{this.thumbnail}} alt='imagen producto' width="60px"></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <p class='prodsLink'>No se encontraron productos</p>
+    {{/if}}
+    <a class='prodsLink' href="/">Cargar productos</a>
+
+</section>

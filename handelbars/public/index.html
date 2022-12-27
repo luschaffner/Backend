@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <h2>Ingreso de productos</h2>
+
+    <form id='productsForm' action="http://localhost:8080/productos" method="POST">
+        <label for="product">Product: </label>
+        <input class='product' type="text" name="product" placeholder="Ingrese producto" required>
+        <label for="price">Price: </label>
+        <input class="price" type="text" name="price" placeholder="Ingrese precio" required>
+        <label for="thumbnail">Thumbnail: (URL)</label>
+        <input class="thumbnail" type="url" name="thumbnail" placeholder="Ingrese link" required>
+        <button class="sendBtn" type="submit">Enviar</button>
+    </form>
+
+    <a class='prodsLink' href="/productos">Ver listado de productos</a>
+
+</body>
+</html>
