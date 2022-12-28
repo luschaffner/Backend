@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Script handlebars vía CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <h2>Ingreso de productos</h2>
+
+    <form id='productsForm'>
+        <div class="productPriceCont">
+        <label for="product">Product: </label>
+        <input class='product' type="text" name="product" placeholder="Ingrese producto" required>
+        <label for="price">Price: </label>
+        <input class="price" type="text" name="price" placeholder="Precio" required>
+        </div>
+        <div class="thumbnailCont">
+        <label for="thumbnail">Thumbnail: (URL)</label>
+        <input class="thumbnail" type="url" name="thumbnail" placeholder="Ingrese link" required>
+        </div>
+        <button class="sendBtn" type="submit">Enviar</button>
+    </form>
+
+    <div id="productsList"></div>
+
+    <article id="MessagesCenter">
+
+        <h2 style="text-align: center; margin-bottom: 10px">Centro de mensajes</h2>
+
+        <div class="userInfo">
+            <label class="userEmailLbl" for="userEmail">Email: </label>
+            <input id='userEmail' type="email" name='userEmail' placeholder="Ingrese su email para poder enviar mensajes">
+        </div>
+
+        <div id="messagesContainer">
+
+        </div>
+
+        <form id="messagesForm">
+            <input id='messageContent' type="text" placeholder="Ingrese su mensaje" required>
+            <button class="msgBtn" type="submit">Enviar</button>
+        </form>
+
+    </article>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
